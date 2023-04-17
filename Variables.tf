@@ -1,0 +1,9 @@
+variable "GF_DATABASE_TYPE" { type = string }
+variable "GF_DATABASE_NAME" { type = string }
+variable "GF_DATABASE_HOST" { type = string }
+variable "GF_DATABASE_USER" { type = string }
+variable "GF_DATABASE_PASSWORD" { type = string }
+variable "DB_USER" { type = string }
+variable "DB_PASS" { type = string }
+variable "DB_NAME" { type = string }
+variable "DB_ENDPOINT" { type = string }
