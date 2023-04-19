@@ -20,7 +20,7 @@ resource "kubernetes_secret" "gf-helm-secrets" {
 
   metadata {
     name      = "gf-helm-secrets"
-    namespace = "new-project"
+    namespace = "grafana4"
   }
 
   data = {
@@ -36,7 +36,7 @@ resource "helm_release" "mas-api" {
   name       = "mas-api"
   repository = "https://stephent2023.github.io/mas-api-helm/"
   chart      = "mas-api"
-  namespace  = "new-project"
+  namespace  = "grafana4"
 
   set {
     name  = "DB_USER"
@@ -69,7 +69,7 @@ resource "helm_release" "grafana" {
   name       = "grafana"
   repository = "https://charts.bitnami.com/bitnami"
   chart      = "grafana"
-  namespace  = "new-project"
+  namespace  = "grafana4"
 
   set {
     name  = "persistence.enabled"
